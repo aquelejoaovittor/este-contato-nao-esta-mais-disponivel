@@ -2,44 +2,6 @@
 Uma instalação digital weirdcore inspirada no MSN Messenger. Comunicação como vestígio, memória e ausência.
 
 ---
-
-# 1. NOME DO REPOSITÓRIO (OFICIAL)
-
-Recomendo **um nome que já seja parte da obra**, não apenas técnico:
-
-```
-este-contato-nao-esta-mais-disponivel
-```
-
-Alternativas (caso queira algo mais críptico):
-
-* `msn-liminal-space`
-* `liminal-messenger`
-* `weirdcore-messenger`
-* `contato-indisponivel`
-
-Mas, conceitualmente, o primeiro é o mais forte.
-
----
-
-# 2. DESCRIÇÃO DO REPOSITÓRIO (GitHub “About”)
-
-> Uma instalação digital weirdcore inspirada no MSN Messenger.
-> Comunicação como vestígio, memória e ausência.
-
-Tags sugeridas:
-
-```
-weirdcore, dreamcore, liminal-space, digital-art, interactive-art, nostalgia, msn
-```
-
----
-
-# 3. README.md — TEXTO CURATORIAL + DOCUMENTAÇÃO
-
-👉 *Copie exatamente como está* e salve como `README.md`
-
-````markdown
 # ESTE CONTATO NÃO ESTÁ MAIS DISPONÍVEL
 
 > *Um mensageiro sobre memória, ausência e sistemas que ainda observam.*
@@ -48,10 +10,10 @@ weirdcore, dreamcore, liminal-space, digital-art, interactive-art, nostalgia, ms
 
 # Sobre a obra
 
-**“Este contato não está mais disponível”** não é um erro técnico.  
+“Este contato não está mais disponível” não é um erro técnico.  
 É uma constatação existencial.
 
-Esta obra é uma **instalação digital interativa** inspirada na interface do antigo MSN Messenger (Windows 2000/XP), subvertida pela estética **Weirdcore / Liminal Space**.
+Esta obra é uma instalação digital interativa inspirada na interface do antigo MSN Messenger (Windows 2000/XP), subvertida pela estética Weirdcore / Liminal Space.
 
 Aqui, a comunicação não visa eficiência.  
 Ela existe para evocar.
@@ -75,7 +37,7 @@ Este não é um chat social.
 
 ---
 
-## Experiência
+# Experiência
 
 - Interface inspirada no MSN Messenger 6.2
 - Estética weirdcore / dreamcore
@@ -119,7 +81,7 @@ Esta obra dialoga com temas como:
 
 ---
 
-## Autor
+# Autor
 
 *João Vittor da Silva Souza*
 Web-designer, programador, escritor e artista digital
@@ -128,7 +90,7 @@ Web-designer, programador, escritor e artista digital
 
 ---
 
-## Estado da obra
+# Estado da obra
 
 Esta obra está *concluída*.
 Qualquer modificação posterior deve ser entendida como *derivação*, não continuação.
@@ -156,17 +118,13 @@ Sem distração.
 
 # 5. STATUS FINAL (DECLARAÇÃO)
 
-- Obra: **concluída**
-- Forma: **instalação digital**
-- Meio: **GitHub como espaço expositivo**
-- Função: **memória interativa**
-- Continuidade: **encerrada**
+- Obra: concluída
+- Forma: instalação digital
+- Meio: GitHub como espaço expositivo
+- Função: memória interativa
+- Continuidade: encerrada
 
 A partir do momento em que você fizer o commit,  
-**a obra deixa de ser desenvolvimento e passa a ser arquivo**.
+a obra deixa de ser desenvolvimento e passa a ser arquivo.
 
-Se quiser, o único passo restante **fora do código** é decidir:
-- se este repositório é **portfólio**, **obra isolada** ou **primeira de uma série**.
 
-Mas isso já não pertence mais ao sistema.
-```
