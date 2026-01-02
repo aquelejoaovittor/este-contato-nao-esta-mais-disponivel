@@ -65,7 +65,7 @@ Cada sessão é levemente diferente.
 
 Não há dependências.
 Não há backend.
-O arquivo *é a obra*.
+O arquivo é a obra.
 
 ---
 
@@ -83,7 +83,7 @@ Esta obra dialoga com temas como:
 
 # Autor
 
-*João Vittor da Silva Souza*
+João Vittor da Silva Souza
 Web-designer, programador, escritor e artista digital
 
 > “Transformando visões em realidade digital.”
@@ -92,8 +92,8 @@ Web-designer, programador, escritor e artista digital
 
 # Estado da obra
 
-Esta obra está *concluída*.
-Qualquer modificação posterior deve ser entendida como *derivação*, não continuação.
+Esta obra está concluída.
+Qualquer modificação posterior deve ser entendida como derivação, não continuação.
 
 ```
 
