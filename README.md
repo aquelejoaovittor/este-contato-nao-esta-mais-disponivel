@@ -53,13 +53,13 @@ Cada sessão é levemente diferente.
 # Como executar
 
 1. Clone o repositório:
-   ```bash
+
    git clone https://github.com/SEU_USUARIO/este-contato-nao-esta-mais-disponivel.git
 ````
 
 2. Abra o arquivo:
 
-   ```bash
+ 
    index.html
    ```
 
