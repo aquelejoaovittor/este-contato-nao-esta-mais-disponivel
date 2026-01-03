@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Este contato não está mais disponível</title>
+
+<style>
+/* ===== RESET XP ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: Arial, "MS Sans Serif", sans-serif;
+  background: url("https://i.imgur.com/6QZ6FQH.jpeg");
+  background-size: cover;
+  filter: contrast(1.15) brightness(0.95);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== JANELA MSN ===== */
+.window {
+  width: 900px;
+  height: 600px;
+  background: #c0c0c0;
+  border: 2px solid #fff;
+  box-shadow: 0 0 40px rgba(0,0,0,.6);
+  display: flex;
+  flex-direction: column;
+}
+
+.titlebar {
+  background: #0a246a;
+  color: white;
+  padding: 4px 8px;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+}
+
+/* ===== CONTATOS ===== */
+.contacts {
+  width: 240px;
+  background: #d6d6d6;
+  border-right: 1px solid #777;
+  padding: 8px;
+  font-size: 12px;
+}
+
+.contacts p {
+  margin-bottom: 6px;
+  text-shadow: 1px 0 red, -1px 0 cyan;
+}
+
+.contacts li {
+  list-style: none;
+  margin-bottom: 4px;
+  opacity: .8;
+}
+
+/* ===== CHAT ===== */
+.chat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #f4f4f4;
+}
+
+.status {
+  padding: 6px;
+  font-size: 11px;
+  background: #e4e4e4;
+  border-bottom: 1px solid #aaa;
+  font-style: italic;
+}
+
+.messages {
+  flex: 1;
+  padding: 10px;
+  font-size: 13px;
+  overflow-y: auto;
+}
+
+.input {
+  padding: 6px;
+  background: #dcdcdc;
+  border-top: 1px solid #aaa;
+  display: flex;
+  gap: 6px;
+}
+
+input {
+  flex: 1;
+  border: 1px solid #777;
+  padding: 3px;
+}
+
+/* ===== TEXTO CURATORIAL ===== */
+.curatorial {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 360px;
+  font-size: 11px;
+  background: rgba(192,192,192,.9);
+  padding: 8px;
+  border: 1px solid #777;
+  display: none;
+}
+
+/* ===== GLITCH ===== */
+.glitch {
+  text-shadow: 1px 0 red, -1px 0 cyan;
+}
+
+/* ===== TREMER ===== */
+@keyframes nudge {
+  0% { transform: translate(0); }
+  25% { transform: translate(12px); }
+  50% { transform: translate(-12px); }
+  75% { transform: translate(6px); }
+  100% { transform: translate(0); }
+}
+.shake {
+  animation: nudge .2s;
+}
+</style>
+</head>
+
+<body>
+
+<div class="window" id="window">
+  <div class="titlebar">
+    <span class="glitch">Este contato não está mais disponível</span>
+    <span>X</span>
+  </div>
+
+  <div class="content">
+    <div class="contacts">
+      <p>Contatos</p>
+      <ul>
+        <li>👁 alguém_online</li>
+        <li style="opacity:.4">☁ ausente</li>
+        <li style="opacity:.2">— desconectado</li>
+      </ul>
+    </div>
+
+    <div class="chat">
+      <div class="status">
+        “Você não lembra quando entrou.”
+      </div>
+
+      <div class="messages" id="messages">
+        <p><b>sistema:</b> você ainda está aqui.</p>
+      </div>
+
+      <div class="input">
+        <input id="msg" placeholder="Digite algo…" />
+        <button onclick="send()">Enviar</button>
+        <button onclick="nudge()">Nudge</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="curatorial" id="curatorial">
+<b>Texto Curatorial</b><br><br>
+“Este contato não está mais disponível” simula um mensageiro fora do tempo.
+Aqui, comunicação é ruína, memória e atraso.<br><br>
+O sistema responde, mesmo quando ninguém mais está.
+</div>
+
+<script>
+const messages = document.getElementById("messages");
+const msg = document.getElementById("msg");
+const win = document.getElementById("window");
+const cur = document.getElementById("curatorial");
+
+function send() {
+  if (!msg.value) return;
+  messages.innerHTML += `<p><b>você:</b> ${corrupt(msg.value)}</p>`;
+  msg.value = "";
+
+  if (Math.random() < 0.3) ghost();
+}
+
+function ghost() {
+  const ghosts = [
+    "o silêncio também é uma resposta",
+    "alguém esteve aqui antes",
+    "isso não é em tempo real",
+    "você não fechou esta janela"
+  ];
+  setTimeout(() => {
+    messages.innerHTML += `<p><b>sistema:</b> ${ghosts[Math.floor(Math.random()*ghosts.length)]}</p>`;
+  }, 800);
+}
+
+function corrupt(t) {
+  return Math.random() < .2 ? t.replace(/[aeiou]/, "̷$&̷") : t;
+}
+
+function nudge() {
+  win.classList.add("shake");
+  setTimeout(()=>win.classList.remove("shake"),200);
+}
+
+setTimeout(()=>cur.style.display="block",5000);
+</script>
+
+</body>
+</html>
